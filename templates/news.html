@@ -1,25 +1,123 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<head title="Лицей 1502 новости лицея">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Новости лицея №1502 при МЭИ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
-<h1>
-    Новости лицея №1502 при МЭИ
-</h1>
-<div class="header">
-<button onclick = "window.location.href='{{ url_for('news') }}';">
-    <h2><strong>Новости лицея</strong></h2>
-</button>
-<button onclick = "window.location.href='{{ url_for('culture') }}';">
-    <h2><strong>Творческая деятельность</strong></h2>
-</button>
-<button onclick = "window.location.href='{{ url_for('sports') }}';">
-    <h2><strong>Спортивные активности</strong></h2>
-</button>
-<button onclick = "window.location.href='{{ url_for('sports') }}';">
-    <h2><strong>О нас</strong></h2>
-</button>
-</div>
+    <header>
+        <div class="school-header">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Логотип Лицея 1502" class="logo">
+            <div class="header-text">
+                <h1>Лицей №1502 при МЭИ</h1>
+                <p class="motto">Образование, наука, творчество</p>
+            </div>
+        </div>
+    </header>
 
+    <nav class="header">
+        <button onclick="window.location.href='{{ url_for('news') }}';">
+            <h2><strong>Новости лицея</strong></h2>
+        </button>
+        <button onclick="window.location.href='{{ url_for('culture') }}';">
+            <h2><strong>Творческая деятельность</strong></h2>
+        </button>
+        <button onclick="window.location.href='{{ url_for('sports') }}';">
+            <h2><strong>Спортивные активности</strong></h2>
+        </button>
+
+    </nav>
+
+    <main class="container">
+        <section class="featured-news">
+            <h2>Главная новость</h2>
+            <article class="highlight">
+                <div class="news-date">20 октября 2023</div>
+                <h3>Команда лицея заняла первое место на Всероссийской олимпиаде по робототехнике</h3>
+                <p>Ученики 10-х классов под руководством преподавателя А.И. Петрова разработали уникального робота-исследователя, способного анализировать экологическую обстановку. Проект получил высшую оценку жюри и рекомендацию к внедрению в промышленное производство.</p>
+                <div class="news-tags">
+                    <span class="tag achievement">Достижение</span>
+                    <span class="tag science">Наука</span>
+                </div>
+            </article>
+        </section>
+
+        <section class="news-grid">
+            <div class="news-card">
+                <div class="news-date">18 октября 2023</div>
+                <h3>Открытие нового компьютерного класса</h3>
+                <p>В лицее состоялось торжественное открытие обновленного компьютерного класса, оборудованного по последнему слову техники. Теперь у учеников есть доступ к мощным рабочим станциям для программирования, 3D-моделирования и научных расчетов.</p>
+                <div class="news-tags">
+                    <span class="tag event">Событие</span>
+                    <span class="tag education">Образование</span>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-date">15 октября 2023</div>
+                <h3>Театральная студия представляет новый спектакль</h3>
+                <p>«Физики и лирики» - так называется новая постановка лицейского театра, премьера которой состоялась в актовом зале. Спектакль посвящен вечному спору между техническими и гуманитарными науками.</p>
+                <div class="news-tags">
+                    <span class="tag culture">Творчество</span>
+                    <span class="tag event">Событие</span>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-date">12 октября 2023</div>
+                <h3>Победа в городских соревнованиях по баскетболу</h3>
+                <p>Юношеская сборная лицея завоевала золотые медали в межшкольных соревнованиях Восточного округа. Финал был напряженным, но наши ребята показали характер и волю к победе!</p>
+                <div class="news-tags">
+                    <span class="tag sports">Спорт</span>
+                    <span class="tag achievement">Достижение</span>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-date">10 октября 2023</div>
+                <h3>Научно-практическая конференция «Энергия будущего»</h3>
+                <p>Учащиеся представили проекты в области альтернативной энергетики. Лучшие работы будут рекомендованы для участия в конкурсе молодых ученых при МЭИ.</p>
+                <div class="news-tags">
+                    <span class="tag science">Наука</span>
+                    <span class="tag education">Образование</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="announcements">
+            <h2>Объявления</h2>
+            <ul>
+                <li><strong>25 октября</strong> - День открытых дверей для родителей будущих лицеистов</li>
+                <li><strong>28 октября</strong> - Начало школьного этапа Всероссийской олимпиады</li>
+                <li><strong>30 октября</strong> - Экскурсия в лаборатории МЭИ для учащихся 10-х классов</li>
+                <li><strong>До 1 ноября</strong> - Прием заявок на участие в зимней математической школе</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h4>Контакты</h4>
+                <p>Москва, ул. Михалковская, д. 52Б</p>
+                <p>Телефон: +7 (499) 123-45-67</p>
+                <p>Email: info@lyceum1502.ru</p>
+            </div>
+            <div class="social-links">
+                <h4>Мы в социальных сетях</h4>
+                <div class="social-icons">
+                    <a href="#">VK</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">YouTube</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© Лицей №1502 при МЭИ, 2023</p>
+                <p>Все права защищены</p>
+            </div>
+        </div>
+    </footer>
 </body>
+</html>
