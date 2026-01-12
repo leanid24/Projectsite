@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<head title="Лицей 1502 Внеурочная деятельность">
+</head>
+
+<body>
+<h1>
+    Внеурочная деятельность лицея №1502 при МЭИ
+</h1>
+<div class="header">
+<button onclick = "window.location.href='{{ url_for('news') }}';">
+    <h2><strong>Новости лицея</strong></h2>
+</button>
+<button onclick = "window.location.href='{{ url_for('culture') }}';">
+    <h2><strong>Творческая деятельность</strong></h2>
+</button>
+<button onclick = "window.location.href='{{ url_for('sports') }}';">
+    <h2><strong>Спортивные активности</strong></h2>
+</button>
+<button onclick = "window.location.href='{{ url_for('sports') }}';">
+    <h2><strong>О нас</strong></h2>
+</button>
+</div>
+
+</body>
